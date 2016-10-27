@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Walnuts - RGB Led Color Picker</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <!--
+  check out readme.md for more info on YOUR_NETWORK_IP
+  <script src="http://YOUR_NETWORK_IP:3000/socket.io/socket.io.js"></script>
+  -->
+  <script src="http://192.168.1.76:3000/socket.io/socket.io.js"></script>
+  <script>
+    $(document).ready(function() {
+      /* check out readme.md for more info on YOUR_NETWORK_IP
+      var socket = io.connect('http://YOUR_NETWORK_IP:3000');
+      */
+      var socket = io.connect('http://192.168.1.76:3000');
+      $('#colorChoice').change(function(){
+        socket.emit('color',{color:$(this).val()});
+        e.preventDefault();
+      });
+    });
+  </script>
+</head>
+<body>
+    <input type="color" id="colorChoice">
+</body>
+</html>
