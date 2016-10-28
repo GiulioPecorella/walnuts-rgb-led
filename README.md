@@ -4,7 +4,7 @@ Change color of RGB led on Arduino via web interface on the same network.
 ## Setup
 
 1. Download or fork this repo.
-2. See Fritzing diagram for Arduino wiring
+2. [See Fritzing diagram for Arduino wiring](https://github.com/rwaldron/johnny-five/blob/master/docs/breadboard/led-rgb.png)
 3. Run `npm install`
 4. Change YOUR_NETWORK_IP in index.html (see "What's my network IP?")
 5. Plug your Arduino
